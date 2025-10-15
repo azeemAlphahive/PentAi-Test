@@ -24,11 +24,11 @@ export function Footer() {
           
           {/* Social Icons */}
           <div className="order-3 flex items-center gap-3 sm:gap-[12px]">
-            <Image src="/Images/Facebook.svg" className="w-5 h-5 cursor-pointer sm:w-[24px] sm:h-[24px]" alt="Facebook" width={24} height={24} />
-            <Image src="/Images/Instagram.svg" className="w-5 h-5 cursor-pointer  sm:w-[24px] sm:h-[24px]" alt="Instagram" width={24} height={24} />
-            <Image src="/Images/x.svg" className="w-5 h-5 cursor-pointer sm:w-[24px] sm:h-[24px]" alt="X" width={24} height={24} />
-            <Image src="/Images/LinkedIn.svg" className="w-5 cursor-pointer h-5 sm:w-[24px] sm:h-[24px]" alt="LinkedIn" width={24} height={24} />
-            <Image src="/Images/Youtube.svg" className="w-5 cursor-pointer h-5 sm:w-[24px] sm:h-[24px]" alt="YouTube" width={24} height={24} />
+            <Image src="/images/Facebook.svg" className="w-5 h-5 cursor-pointer sm:w-[24px] sm:h-[24px]" alt="Facebook" width={24} height={24} />
+            <Image src="/images/Instagram.svg" className="w-5 h-5 cursor-pointer  sm:w-[24px] sm:h-[24px]" alt="Instagram" width={24} height={24} />
+            <Image src="/images/X.svg" className="w-5 h-5 cursor-pointer sm:w-[24px] sm:h-[24px]" alt="X" width={24} height={24} />
+            <Image src="/images/LinkedIn.svg" className="w-5 cursor-pointer h-5 sm:w-[24px] sm:h-[24px]" alt="LinkedIn" width={24} height={24} />
+            <Image src="/images/Youtube.svg" className="w-5 cursor-pointer h-5 sm:w-[24px] sm:h-[24px]" alt="YouTube" width={24} height={24} />
           </div>
         </div>
 
