@@ -173,7 +173,7 @@ function ColumnCopy({ titleA, titleB, titleC, bullets }: ColumnContent) {
             key={i}
             className="flex items-center gap-[10px] text-[14px] leading-relaxed text-zinc-300/90"
           >
-              <Image src='/Images/CheckCircle.svg' className="h-[30px] w-[30px] text-white" alt="CheckCircle" width={30} height={30} />
+              <Image src='/images/CheckCircle.svg' className="h-[30px] w-[30px] text-white" alt="CheckCircle" width={30} height={30} />
 
             <span className="text-[#ECEDEE] font-[dm] text-[20px]">{b}</span>
           </li>

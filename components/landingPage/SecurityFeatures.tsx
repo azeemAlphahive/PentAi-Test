@@ -4,7 +4,6 @@ import { motion, easeOut } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { NavBar } from "@/components/landingPage/Navbar";
 
 type Feature = {
   icon: string;
@@ -12,12 +11,12 @@ type Feature = {
 };
 
 const features: Feature[] = [
-  { icon: "/Images/lock/LockLaminated.svg", label: "Lorem Ipsum Dollar" },
-  { icon: "/Images/lock/SecurityCamera.svg", label: "Lorem Ipsum Dollar" },
-  { icon: "/Images/lock/Fingerprint.svg", label: "Lorem Ipsum Dollar" },
-  { icon: "/Images/lock/ShieldWarning.svg", label: "Lorem Ipsum Dollar" },
-  { icon: "/Images/lock/ShieldCheck.svg", label: "Lorem Ipsum Dollar" },
-  { icon: "/Images/lock/wall.svg", label: "Lorem Ipsum Dollar" },
+  { icon: "/images/lock/LockLaminated.svg", label: "Lorem Ipsum Dollar" },
+  { icon: "/images/lock/SecurityCamera.svg", label: "Lorem Ipsum Dollar" },
+  { icon: "/images/lock/Fingerprint.svg", label: "Lorem Ipsum Dollar" },
+  { icon: "/images/lock/ShieldWarning.svg", label: "Lorem Ipsum Dollar" },
+  { icon: "/images/lock/ShieldCheck.svg", label: "Lorem Ipsum Dollar" },
+  { icon: "/images/lock/Wall.svg", label: "Lorem Ipsum Dollar" },
 ];
 
 export function SecurityFeatures() {
