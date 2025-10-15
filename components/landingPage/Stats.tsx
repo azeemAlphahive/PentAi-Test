@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, easeInOut } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
@@ -42,7 +42,7 @@ function StatCard({ value, caption, index, inView }: StatCardProps) {
       transition: {
         delay: index * 0.2,
         duration: 0.6,
-        ease: [0.22, 1, 0.36, 1]
+        ease: easeInOut
       }
     }
   };
@@ -55,7 +55,7 @@ function StatCard({ value, caption, index, inView }: StatCardProps) {
       transition: {
         delay: index * 0.2 + 0.3,
         duration: 0.5,
-        ease: [0.22, 1, 0.36, 1]
+        ease: easeInOut
       }
     }
   };
@@ -68,7 +68,7 @@ function StatCard({ value, caption, index, inView }: StatCardProps) {
       transition: {
         delay: index * 0.2 + 0.5,
         duration: 0.4,
-        ease: [0.22, 1, 0.36, 1]
+        ease: easeInOut
       }
     }
   };
@@ -184,7 +184,7 @@ export function FeatureStats({
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+      transition: { duration: 0.6, ease: easeInOut }
     }
   };
 

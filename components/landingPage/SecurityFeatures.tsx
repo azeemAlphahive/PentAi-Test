@@ -120,7 +120,7 @@ export function SecurityFeatures() {
     variants={itemVariants}
     className="col-span-2 lg:col-span-2 flex justify-center"
   >
-    <div className="w-full max-w-[260px]">
+    <div className="w-full max-w-[320px]">
       <FeatureCard feature={features[2]} className="h-[150px]" />
     </div>
   </motion.div>
