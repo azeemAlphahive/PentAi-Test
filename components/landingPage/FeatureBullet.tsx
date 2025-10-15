@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, easeOut, easeIn } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
@@ -54,7 +54,7 @@ export function FeatureBulletsShowcase({
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
@@ -66,7 +66,7 @@ export function FeatureBulletsShowcase({
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
@@ -79,21 +79,12 @@ export function FeatureBulletsShowcase({
       scale: 1,
       transition: {
         duration: 0.7,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
 
-  const imageVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeIn"
-      }
-    }
-  };
+  // ...existing code...
 
   const activeFeatureVariants = {
     inactive: { 

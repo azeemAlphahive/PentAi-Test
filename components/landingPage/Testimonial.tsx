@@ -26,14 +26,13 @@ export function Testimonials({
   autoScrollInterval = 3000,
 }: Props) {
 
-  const safeItems = items ?? [];
-
-  const [rowA, rowB,] = useMemo(() => {
+  const [rowA, rowB] = useMemo(() => {
+    const safeItems = items ?? [];
     const a: Testimonial[] = [];
     const b: Testimonial[] = [];
     safeItems.forEach((t, i) => (i % 2 === 0 ? a : b).push(t));
     return [a, b];
-  }, [safeItems]);
+  }, [items]);
 
   return (
     <section className={`relative isolate py-14 sm:py-[64px] ${className}`}>
@@ -155,7 +154,7 @@ function ScrollRow({
       }
       el.removeEventListener('scroll', handleScroll);
     };
-  }, [autoScroll, scrollInterval, reverse]);
+  }, [autoScroll, scrollInterval, reverse, autoScrollNext, handleScroll]);
 
   // Duplicate items for seamless infinite scroll
   const duplicatedItems = useMemo(() => {

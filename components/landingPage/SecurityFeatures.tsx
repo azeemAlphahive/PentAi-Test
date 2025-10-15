@@ -1,9 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { NavBar } from "@/components/landingPage/Navbar";
 
 type Feature = {
   icon: string;
@@ -40,44 +41,45 @@ export function SecurityFeatures() {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: { duration: 0.5, ease: easeOut },
     },
   };
 
   return (
-    <section className="relative isolate py-16 md:py-20">
-      <Container>
-        <motion.div
-          ref={ref}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={containerVariants}
-          className="grid gap-[23px] lg:grid-cols-2"
-        >
-          {/* left text + lock */}
-          <div className="relative max-w-lg">
-            {/* spotlight */}
-            <div
-              aria-hidden
-              className="
-                pointer-events-none absolute -z-10
-                left-1/3 top-[56%] h-[420px] w-[520px] -translate-x-1/2 -translate-y-1/2
-                [background:radial-gradient(60%_60%_at_50%_60%,rgba(255,255,255,0.22),rgba(255,255,255,0.10)_45%,transparent_80%)]
-                blur-[24px]
-              "
-            />
+  <>
+      <section className="relative isolate py-16 md:py-20">
+        <Container>
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={containerVariants}
+            className="grid gap-[23px] lg:grid-cols-2 px-10"
+          >
+            {/* left text + lock */}
+            <div className="relative max-w-lg">
+              {/* spotlight */}
+              <div
+                aria-hidden
+                className="
+                  pointer-events-none absolute -z-10
+                  left-1/3 top-[56%] h-[420px] w-[520px] -translate-x-1/2 -translate-y-1/2
+                  [background:radial-gradient(60%_60%_at_50%_60%,rgba(255,255,255,0.22),rgba(255,255,255,0.10)_45%,transparent_80%)]
+                  blur-[24px]
+                "
+              />
 
-            <motion.h2 
-              variants={itemVariants}
-              className="text-[48px] leading-[1.1] font-[dm-semibold]"
-            >
-              <span className="text-zinc-300">Lorem</span>{" "}
-              <span className="text-white">Ipsum</span>
-              <br />
-              <span className="text-white">Dollar</span>
-            </motion.h2>
-            
-            <motion.p 
+              <motion.h2 
+                variants={itemVariants}
+                className="text-[48px] leading-[1.1] font-[dm-semibold]"
+              >
+                <span className="text-zinc-300">Lorem</span>{" "}
+                <span className="text-white">Ipsum</span>
+                <br />
+                <span className="text-white">Dollar</span>
+              </motion.h2>
+              
+              <motion.p 
               variants={itemVariants}
               className="mt-[30px] max-w-md font-[dm] text-[16px] text-white"
             >
@@ -103,49 +105,52 @@ export function SecurityFeatures() {
           </div>
 
           {/* right side icons */}
-          <div className="grid grid-cols-2 gap-6 lg:grid-cols-3 w-full md:auto-rows-[150px]">
-            {/* row 1 */}
-            <motion.div variants={itemVariants}>
-              <FeatureCard feature={features[0]} />
-            </motion.div>
-            
-            <motion.div variants={itemVariants}>
-              <FeatureCard
-                feature={features[1]}
-                className="lg:col-span-2 h-[200px] md:h-[150px]"
-              />
-            </motion.div>
+ <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 w-full auto-rows-[150px]">
+  {/* Row 1 */}
+  <motion.div variants={itemVariants} className="col-span-1">
+    <FeatureCard feature={features[0]} className="h-[150px]" />
+  </motion.div>
 
-            {/* row 2 */}
-            <motion.div variants={itemVariants}>
-              <FeatureCard
-                feature={features[2]}
-                className="lg:col-span-2 lg:row-span-1 w-[288px]"
-              />
-            </motion.div>
-            
-            <motion.div variants={itemVariants}>
-              <FeatureCard
-                feature={features[3]}
-                className="lg:col-span-1 lg:row-span-2 min-h-[320px]"
-              />
-            </motion.div>
+  <motion.div variants={itemVariants} className="col-span-1 lg:col-span-2">
+    <FeatureCard feature={features[1]} className="h-[150px]" />
+  </motion.div>
 
-            {/* row 3 */}
-            <motion.div variants={itemVariants}>
-              <FeatureCard feature={features[4]} />
-            </motion.div>
-            
-            <motion.div variants={itemVariants}>
-              <FeatureCard feature={features[5]} className="" />
-            </motion.div>
-          </div>
+  {/* Row 2 - centered card */}
+  <motion.div
+    variants={itemVariants}
+    className="col-span-2 lg:col-span-2 flex justify-center"
+  >
+    <div className="w-full max-w-[260px]">
+      <FeatureCard feature={features[2]} className="h-[150px]" />
+    </div>
+  </motion.div>
+
+  {/* Right tall card spanning 2 rows (2nd + 3rd) */}
+  <motion.div
+    variants={itemVariants}
+    className="row-span-2 col-span-1 lg:col-start-3"
+  >
+    <FeatureCard feature={features[3]} className="h-[320px]" />
+  </motion.div>
+
+  {/* Row 3 - bottom left side */}
+  <motion.div variants={itemVariants} className="col-span-1">
+    <FeatureCard feature={features[4]} className="h-[150px]" />
+  </motion.div>
+
+  <motion.div variants={itemVariants} className="col-span-1">
+    <FeatureCard feature={features[5]} className="h-[150px]" />
+  </motion.div>
+</div>
+
+
         </motion.div>
       </Container>
     </section>
+  </>
+
   );
 }
-
 function FeatureCard({
   feature,
   className = "",

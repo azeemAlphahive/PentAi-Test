@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, easeOut, easeInOut } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Container } from "@/components/ui/Container";
 
@@ -27,7 +27,7 @@ export function Hero() {
       opacity: 1,
       transition: {
         duration: 0.7,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
@@ -40,14 +40,14 @@ export function Hero() {
       transition: {
         delay: 0.6,
         duration: 0.5,
-        ease: "easeOut"
+        ease: easeOut
       }
     },
     hover: {
       scale: 1.05,
       transition: {
         duration: 0.2,
-        ease: "easeInOut"
+        ease: easeInOut
       }
     },
     tap: {
@@ -61,7 +61,7 @@ export function Hero() {
       opacity: 1,
       transition: {
         duration: 1.5,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
@@ -74,7 +74,7 @@ export function Hero() {
       transition: {
         delay: 0.8,
         duration: 2,
-        ease: "easeOut"
+        ease: easeOut
       }
     },
     float: {
@@ -82,7 +82,7 @@ export function Hero() {
       transition: {
         duration: 6,
         repeat: Infinity,
-        ease: "easeInOut"
+        ease: easeInOut
       }
     }
   };

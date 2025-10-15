@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { CheckCircle2 } from "lucide-react";
+// import { CheckCircle2 } from "lucide-react";
 
 type ColumnContent = {
   titleA: string;
@@ -173,7 +173,7 @@ function ColumnCopy({ titleA, titleB, titleC, bullets }: ColumnContent) {
             key={i}
             className="flex items-center gap-[10px] text-[14px] leading-relaxed text-zinc-300/90"
           >
-              <img src='/Images/CheckCircle.svg' className="h-[30px] w-[30px] text-white" />
+              <Image src='/Images/CheckCircle.svg' className="h-[30px] w-[30px] text-white" alt="CheckCircle" width={30} height={30} />
 
             <span className="text-[#ECEDEE] font-[dm] text-[20px]">{b}</span>
           </li>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, easeOut, easeIn } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
@@ -42,7 +42,7 @@ export function DashboardShowcase({
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.6, ease: easeOut }
     }
   };
 
@@ -54,7 +54,7 @@ export function DashboardShowcase({
       transition: { 
         delay: 0.3,
         duration: 0.5, 
-        ease: "easeOut" 
+        ease: easeOut 
       }
     }
   };
@@ -68,7 +68,7 @@ export function DashboardShowcase({
       transition: {
         delay: 0.4,
         duration: 0.7,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
@@ -80,7 +80,7 @@ export function DashboardShowcase({
       transition: {
         delay: 0.6,
         duration: 0.5,
-        ease: "easeIn"
+        ease: easeIn
       }
     }
   };
@@ -92,7 +92,7 @@ export function DashboardShowcase({
       transition: {
         delay: 0.5,
         duration: 0.8,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
