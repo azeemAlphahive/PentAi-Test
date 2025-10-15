@@ -19,7 +19,7 @@ const testimonials = [
     id: 1,
     name: "Floyd Miles",
     role: "Founder, Papercut",
-    avatar: "/Images/Ellipse 1.svg",
+    avatar: "/images/Ellipse1.svg",
     quote:
       "Magnis lacus laoreet pharetra commodo ac semper nam. Malesuada viverra mattis pellentesque consectetur nunc dignissim gravida duis.",
   },
@@ -27,14 +27,14 @@ const testimonials = [
     id: 2,
     name: "Esther Howard",
     role: "Ops Lead",
-    avatar: "/Images/Ellipse 1 (2).svg",
+    avatar: "/images/Ellipse1.svg",
     quote: "Arcu augue egestas nec facilisis volutpat tortor tempus vitae sit.",
   },
   {
     id: 3,
     name: "Erat consectetur",
     role: "Product @ Delta",
-    avatar: "/Images/Ellipse 1 (1).svg",
+    avatar: "/images/Ellipse1.svg",
     quote:
       "Diam tellus risus venenatis arcu sed pretium enim. Gravida odio tincidunt sem risus sit.",
   },
@@ -42,7 +42,7 @@ const testimonials = [
     id: 6,
     name: "Erat consectetur",
     role: "Product @ Delta",
-    avatar: "/Images/Ellipse 1 (2).svg",
+    avatar: "/images/Ellipse1.svg",
     quote:
       "Diam tellus risus venenatis arcu sed pretium enim. Gravida odio tincidunt sem risus sit.",
   },
@@ -58,7 +58,7 @@ const testimonials = [
     id: 5,
     name: "Erat consectetur",
     role: "Product @ Delta",
-    avatar: "/Images/Ellipse 1.svg",
+    avatar: "/images/Ellipse1.svg",
     quote:
       "Diam tellus risus venenatis arcu sed pretium enim. Gravida odio tincidunt sem risus sit.",
   },
@@ -103,7 +103,7 @@ export default function Home() {
         <FeatureStats />
         <SecurityFeatures />
         <FeatureChecklistBowl
-          leftScreenshots={["/Images/Frame 1707479353.svg"]}
+          leftScreenshots={["/images/financial-dashboard.png"]}
           left={{
             titleA: "Lorem Ipsum",
             titleB: "Dolar Sed",
@@ -116,7 +116,7 @@ export default function Home() {
             ],
           }}
           rightScreenshots={[
-            "/Images/Frame 17074793532.svg",
+            "/images/financial-dashboard.png",
           ]}
           right={{
             titleA: "Lorem Ipsum",
